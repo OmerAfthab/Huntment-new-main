@@ -1,0 +1,2136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loggedout - HuntMent</title>
+    <link rel="stylesheet" href="./investor.css">
+
+    <!--Swiperjs cdn -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <!--jquery cdn-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!--Select2 js cdn here-->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+    <script src="./inv_logedout.js" defer></script>
+
+    <style>
+        .form-control {
+            background-color: transparent;
+            border: none;
+            border-radius: 0;
+            border-bottom: 1px solid #1999ce;
+        }
+
+        .form-control:focus,
+        .form-control:active {
+            box-shadow: none;
+            background-color: transparent !important;
+        }
+
+        .img_logo {
+            width: 4rem;
+            height: 4rem;
+        }
+
+
+
+        /* .streamline .sl-primary {
+    border-left-color: #188ae2;
+}
+
+.streamline .sl-item {
+    position: relative;
+    padding-bottom: 12px;
+    border-left: 1px solid #ccc;
+}
+.streamline .sl-item:before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 0;
+    background-color: #ccc;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+}
+.streamline .sl-primary:before, .streamline .sl-primary:last-child:after {
+    background-color: #188ae2;
+}
+
+
+.streamline .sl-danger:before, .streamline .sl-danger:last-child:after {
+    background-color: #ff5b5b;
+}
+
+.streamline .sl-success {
+    border-left-color: #10c469;
+}
+
+.streamline .sl-success:before, .streamline .sl-success:last-child:after {
+    background-color: #10c469;
+}
+
+.streamline .sl-warning {
+    border-left-color: #f9c851;
+}
+
+.streamline .sl-warning:before, .streamline .sl-warning:last-child:after {
+    background-color: #f9c851;
+}
+.streamline .sl-danger {
+    border-left-color: #ff5b5b;
+}
+.streamline .sl-item .sl-content {
+    margin-left: 24px;
+}
+.streamline .sl-item p {
+	color:#333;
+} */
+
+        .timelineArea {
+            border-left: 2px solid #1999ce;
+        }
+
+        /* .timeline{
+    background: #00BFFF;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    margin-left: 10%;
+
+    position: relative;
+    color: black;
+} */
+
+        /* .timeline:nth-child(3){
+    margin-bottom: 0;
+} */
+        .timeline::before {
+            position: absolute;
+            content: "";
+            background: #1999ce;
+            border: 2px solid #1999ce;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            left: -6px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container-fluid px-3 px-lg-5 py-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb small d-flex p-0">
+                <li class="breadcrumb-item small"><a href="#" class="link_color text-decoration-none">Home</a></li>
+                <li class="breadcrumb-item small"><a href="#" class="link_color text-decoration-none"> Franchises</a></li>
+                <li class="breadcrumb-item small"><a href="#" class="link_color text-decoration-none"> Dubai</a></li>
+                <li class="breadcrumb-item small"><a href="#" class="link_color text-decoration-none">Food & Beverage</a></li>
+            </ol>
+        </nav>
+        <div class="py-2 px-2 official_bg">
+            <div class="d-flex">
+                <div class="img_logo d-none d-lg-block">
+                    <img src="../base/images/img-2.jpg" class="img-fluid w-100 h-100" alt="franchise logo">
+                </div>
+                <div>
+                    <h6 class="ms-lg-3 w-100 mx-0 px-0">
+                        Cafe Staywoke (Mood Shine Food) - Restaurant Franchise Opportunity</h6>
+                    <div class="d-lg-flex ms-lg-3 w-100">
+                        <p class="small my-0 py-0 p-0 w-25">
+                            <svg class="mb-1" width="12" height="12" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 576 512">
+                                <path
+                                    d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"
+                                    fill="#FFA500" />
+                            </svg>
+                            8.8 / 10
+                        </p>
+                        <p class="small w-100 px-0 mx-0">Established in 2017, 3 Franchisees currently, Headquartered in Gurgaon</p>
+                    </div>
+                    <div class="d-flex justify-content-evenly">
+                        <a href="http://" class="text-decoration-none link-light d-flex align-items-center sm_text"
+                            data-toggle="tooltip" data-placement="top" title="Email Verified">
+                            <svg class="me-1 mb-1" width="12" height="12" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512">
+                                <path
+                                    d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z"
+                                    fill="#fff" />
+                            </svg>
+                            Official Email
+                        </a>
+                        <a href="http://" class="text-decoration-none d-flex link-light align-items-center sm_text"
+                            data-toggle="tooltip" data-placement="top" title="Phone Verified">
+                            <svg class="me-1 mb-1" width="12" height="12" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512">
+                                <path
+                                    d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z"
+                                    fill="#fff" />
+                            </svg>
+                            Phone
+                        </a>
+                        <a href="http://" class="text-decoration-none link-light d-flex align-items-center sm_text"
+                            data-toggle="tooltip" data-placement="top" title="Google Unverified">
+                            <svg class="me-1 unverified_svg mb-1" width="12" height="12"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path
+                                    d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM164 356c-55.3 0-100-44.7-100-100s44.7-100 100-100c27 0 49.5 9.8 67 26.2l-27.1 26.1c-7.4-7.1-20.3-15.4-39.8-15.4-34.1 0-61.9 28.2-61.9 63.2 0 34.9 27.8 63.2 61.9 63.2 39.6 0 54.4-28.5 56.8-43.1H164v-34.4h94.4c1 5 1.6 10.1 1.6 16.6 0 57.1-38.3 97.6-96 97.6zm220-81.8h-29v29h-29.2v-29h-29V245h29v-29H355v29h29v29.2z" />
+                            </svg>
+                            Google+
+                        </a>
+                        <a href="http://" class="text-decoration-none link-light d-flex align-items-center sm_text"
+                            data-toggle="tooltip" data-placement="top" title="Linkedin Verified">
+                            <svg class="me-1 mb-1" width="12" height="12" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 448 512">
+                                <path
+                                    d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                                    fill="#fff" />
+                            </svg>
+                            Linkedin
+                        </a>
+                        <a href="http://" class="text-decoration-none link-light d-flex align-items-center sm_text"
+                            data-toggle="tooltip" data-placement="top" title="Linkedin Verified">
+
+                            <svg class="me-1 mb-1" width="12" height="12" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 448 512">
+                                <path
+                                    d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"
+                                    fill="#fff" />
+                            </svg>
+                            Facebook
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="form-check bg-light col-12 py-3 px-5">
+                <input type="checkbox" class="form-check-input disabled_check" checked disabled>
+                <label class="form-check-label small link_color disabled_label">
+                    This Business is on a Elite Plan.</label>
+            </div>
+
+        </div>
+        <section class="row gx-lg-5 my-2">
+            <div class="col-sm-12 col-md-12 col-lg-7 mb-3 mb-lg-0 me-lg-5">
+                <div class="card py-3">
+                    <div class="card-body ">
+
+                        <div class="d-flex flex-column flex-lg-row">
+                            <div class="position-relative me-1">
+
+                                <img class="bg obj-fit-cover img-fluid" src="../images/img-2.jpg" alt="image1">
+                                <p class="text-center small">Front office view</p>
+                            </div>
+
+                            <div class="position-relative ms-1">
+                                <img class="bg obj-fit-cover img-fluid" src="../images/img-2.jpg" alt="image1">
+                                <p class="text-center small">Side office view</p>
+
+                            </div>
+                        </div>
+                        <h6 class="card-title border-2 border-bottom fs-6 py-2">
+                            All Formats
+                        </h6>
+                        <div class="row border-bottom py-2">
+
+                            <div class="col-5 small"> Format </div>
+
+                            <div class="col-7 d-flex align-items-center small">
+                                100% Franchise Owned ( Operated by the Company)
+                            </div>
+
+                        </div>
+                        <div class="row border-bottom py-2">
+
+                            <div class="col-5 small">Investment</div>
+
+                            <div class="col-7 d-flex align-items-center small">
+                                INR 1 - 2.5 crore
+                            </div>
+
+                        </div>
+                        <div class="row border-bottom py-2">
+                            <div class="col-5 small">Brand Fee</div>
+                            <div class="col-7 d-flex align-items-center small">
+                                AED 25 Millions
+                            </div>
+                        </div>
+                        <div class="row border-bottom py-2">
+                            <div class="col-5 small">Space Required</div>
+                            <div class="col-7 d-flex align-items-center small">
+                                2,500 - 5,000 Sq Ft
+                            </div>
+                        </div>
+                        <div class="row border-bottom py-2">
+                            <div class="col-5 small">Staff </div>
+                            <div class="col-7 d-flex align-items-center small">
+                                20</div>
+                        </div>
+                        <div class="row border-bottom py-2">
+                            <div class="col-5 small">Exp. Monthly Sales</div>
+                            <div class="col-7 d-flex align-items-center small">
+                                Between 30000AED - 500000AED</div>
+                        </div>
+                        <div class="row border-bottom py-2">
+                            <div class="col-5 small">Profit Margin</div>
+                            <div class="col-7 d-flex align-items-center small">
+                                25%
+                            </div>
+                        </div>
+                        <div class="row pt-2">
+                            <div class="col-5 small">Royality</div>
+                            <div class="col-7 d-flex align-items-center small">
+                                We charge 5-7% royalty depending on the sales. Please refer to the franchise deck for
+                                more details
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12  ms-lg-4 col-lg-4 py-3 bg-light">
+                <div class="row mx-1 mx-lg-0">
+                    <div>
+                        <h5 class="fw-bold mb-3 link_color">Send Business Proposal</h5>
+                    </div>
+                    <button class="btn col-6 my_btns rounded-0 bg_black  text-white" id="r_btn">Register</button>
+                    <button class="btn col-6 my_btns rounded-0 add_opacity bg_black text-white"
+                        id="l_btn">Login</button>
+
+                    <form action="POST" class="bg_black  px-4" id="register_form" autocomplete="off">
+                        <h3 class="text-white fs-6 text-center py-3">Connect Easily! </h3>
+
+                        <div>
+                            <label for="name" class="text-white small">Full Name</label>
+                            <input type="text" class="form-control text-white mb-2" id="name" placeholder="John Smith"
+                                maxlength="255" required>
+                        </div>
+                        <div>
+                            <label for="email" class="text-white small">Email address</label>
+
+                            <input type="email" class="form-control text-white  mb-2" id="email"
+                                placeholder="name@example.com">
+                        </div>
+                        <div>
+                            <label for="psw" class="text-white small position-relative">Password</label>
+                            <input type="password" class="form-control text-white position-relative mb-2" id="psw"
+                                placeholder="Password" min="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                                required>
+
+                        </div>
+                        <div id="message">
+                            <h3>Password must contain the following:</h3>
+                            <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                            <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                            <p id="number" class="invalid">A <b>number</b></p>
+                            <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                        </div>
+                        <div>
+                            <label for="confirm_psw" class="text-white small">Confirm Password</label>
+                            <input type="password" class="form-control text-white  mb-2" id="confirm_psw"
+                                placeholder="Password" min="8" required>
+                        </div>
+                        <div class="match_password" id="warn_div">
+                            The two passwords do not match.
+                        </div>
+                        <div class="clearfix">
+                            <button type="submit"
+                                class="btn btn-md official_bg float-end mt-2 text-white">Register</button>
+                        </div>
+                        <div class="small d-flex mt-2 justify-content-center">
+                            <p class="text-white me-2">Already a memeber?</p> <a href="#"
+                                class="link_color text-decoration-none">Login</a>
+                        </div>
+                    </form>
+
+                    <form action="POST" class="bg_black  hide_form px-4" id="login_form" autocomplete="off">
+                        <h3 class="text-white fs-6 text-center py-3">Connect Easily! </h3>
+                        <div class="">
+                            <label for="mail" class="text-white small">Enter Email</label>
+                            <input type="email" class="form-control text-white  mb-3" id="mail"
+                                placeholder="name@example.com">
+                        </div>
+                        <div class="">
+                            <label for="pwd" class="text-white small">Enter Password</label>
+
+                            <input type="password" class="form-control text-white  mb-3" id="pwd" placeholder="Password"
+                                required>
+                        </div>
+                        <div class="clearfix">
+                            <button type="submit"
+                                class="btn btn-md official_bg float-end mt-2 text-white">Login</button>
+                        </div>
+                        <div class="small d-flex mt-2 justify-content-center">
+                            <p class="text-white me-2">Not yet registered?</p> <a href="#"
+                                class="link_color text-decoration-none">Register</a>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="mt-4 px-3 py-4 border border-info small">
+            <div class="">
+                <h5 class="text-center link_color">Learn more about the Franchise</h5>
+                <div class="py-2">
+                    <h6 class="fw-bolder">Documents
+                        <svg class="ms-1" width="12" height="12" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512">
+                            <path
+                                d="M80 192V144C80 64.47 144.5 0 224 0C303.5 0 368 64.47 368 144V192H384C419.3 192 448 220.7 448 256V448C448 483.3 419.3 512 384 512H64C28.65 512 0 483.3 0 448V256C0 220.7 28.65 192 64 192H80zM144 192H304V144C304 99.82 268.2 64 224 64C179.8 64 144 99.82 144 144V192z"
+                                fill="gray" />
+                        </svg>
+
+                    </h6>
+
+                    <p class="text-success small">Document file that we recieve will go here</p>
+                </div>
+
+                <div>
+                    <h6 class="fw-bolder">About Cafe Staywoke (Mood Shine Food)</h6>
+                    <p>Cafe Staywoke is inspired by the millennial concept of being woke, which defines the idea of
+                        being aware. The cafe serves global comfort food which brings food & beverage from around the
+                        world in a casual, approachable setting. Travel the world with your taste buds to seek an
+                        extraordinary and soulful experience.</p>
+
+                    <p>Cafe Staywoke is part of Moonshine Food ventures Pvt. Ltd. (MFVL). Company aims to provide an
+                        unparalleled experience to all patrons by curating bespoke offerings.</p>
+
+                    <p>Staywoke aims to curate a space that incites great, meaningful and like-minded conversations over
+                        comfort food& beverage. Staywoke uses locally produced ingredients, grown and made by real
+                        farmers and artisans ensuring fresh, delicious, gourmet woke meals for their guests. The café
+                        promotes carbon neutrality. 0.</p>
+
+                    <p> One of the most trending cafes of Delhi-NCR, averaging 10K pax per month. EBITDA positive from
+                        month 1.
+
+                        Given revenue figures are easily achievable based on our existing store track records.</p>
+
+                    <p>- Have no loans and a single individual owns the property.</p>
+
+                </div>
+                <div class="my-4">
+                    <h6 class="fw-bolder">Products & Services </h6>
+                    <p>We specialize in serving gourmet global food and beverages.</p>
+                </div>
+                <div class="my-4">
+                    <h6 class="fw-bolder">Preferred Locations</h6>
+                    <p>Dubai</p>
+                </div>
+                <div class="my-4">
+                    <h6 class="fw-bolder">How to get Cafe Staywoke (Mood Shine Food) Franchise?</h6>
+                    <p>Connect with us on HUNTMENT and we will guide you through the process.</p>
+                </div>
+                <div class="my-4">
+                    <h6 class="fw-bolder">What are some of the things we look for in a Franchisee?</h6>
+                    <p>The entire operations are run by the company hence the person involved only needs to overlook the
+                        business. No prior experience or expertise is needed.</p>
+                </div>
+                <div class="my-4">
+                    <h6 class="fw-bolder">Support you can expect from the company</h6>
+                    <p> Everything from setting up to running the day to day operations is done by the company.</p>
+                    <p> This is a new age franchise opportunity where the company and franchisee co exists and work to
+                        create a robust 22-30% EBITDA.</p>
+                    <p> We will help with location, designing, layout, team, marketing, menu, and costin</p>
+                </div>
+                <div class="my-4">
+                    <h6 class="fw-bolder">Profile Stats</h6>
+                    <p>50+ Page Views</p>
+                    <p>20 + Investor Views</p>
+                </div>
+                <div class="my-4">
+                    <h6 class="fw-bolder">Tags</h6>
+                    <p>Fine Dine Restaurant franchise in New Delhi · Casual Restaurant franchise in New Delhi ·
+                        Restaurant franchise in New
+                        Dubai
+                    </p>
+                </div>
+
+
+                <div class="small fst-italic text-muted">
+                    Disclaimer: Huntment is a regulated marketplace for connecting business sell sides with investors,
+                    buyers, lenders and advisors. Neither Huntment represents nor guarantees that the information
+                    mentioned above is complete or correct. Note that Huntment is not liable for any loss, damage,
+                    costs, claims and expenses whatsoever arising from transacting with any other user from the website.
+                    The final responsibility of conducting a thorough due diligence and taking the transaction forward
+                    lies with the users. Please read best practices on Huntment.
+                </div>
+
+
+
+            </div>
+        </section>
+
+
+
+
+        <section class="container-fluid py-4 bg-light">
+            <h6>You might also be interested in these opportunities</h6>
+
+            <section class="container-fluid position-relative">
+                <div class="swiper mySwiper1 container  w-100">
+                    <div class="swiper-wrapper content">
+
+                        <div class="swiper-slide col-md-4 h-75 col-sm-12 mb-sm-4 bg-white my-4">
+                            <div class="mb-4 d-flex align-items-stretch">
+                                <div class="card border_huntment py-2 py-lg-0 py-xl-0 py-xxl-0">
+                                    <div class="card-body p-0 d-flex flex-column">
+                                        <div class="border-bottom px-2 py-2">
+                                            <h6 class="card-title lg_text m-0">Franchise title goes here it should be
+                                                link</h6>
+                                            <a href="http://" class="text-decoration-none small
+                              link_color">Hightlighting line about the Franchise. </a>
+                                        </div>
+                                        <div class="social_info
+                             d-flex align-items-center justify-content-between px-2 
+                             py-3 py-lg-2 py-xl-2 py-xxl-2 small">
+                                            <div class="social_link card_inner small">
+                                                <a href="http://" class="text-decoration-none small link_color 
+                                d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                                                    title="Email Verified">
+                                                    <svg class="me-1" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                        <path
+                                                            d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z" />
+                                                    </svg>
+                                                    Official Email
+                                                </a>
+                                            </div>
+                                            <div class="social_link card_inner small">
+                                                <a href="http://" class="text-decoration-none 
+                                link_color d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                                                    title="Phone Verified">
+                                                    <svg class="me-1" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                        <path
+                                                            d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z" />
+                                                    </svg>
+                                                    Phone
+                                                </a>
+                                            </div>
+                                            <div class="social_link small">
+                                                <a href="http://" class="text-decoration-none 
+                                unverified_link d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                                                    title="Google Unverified">
+                                                    <svg class="me-1 unverified_link" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                        <path
+                                                            d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM164 356c-55.3 0-100-44.7-100-100s44.7-100 100-100c27 0 49.5 9.8 67 26.2l-27.1 26.1c-7.4-7.1-20.3-15.4-39.8-15.4-34.1 0-61.9 28.2-61.9 63.2 0 34.9 27.8 63.2 61.9 63.2 39.6 0 54.4-28.5 56.8-43.1H164v-34.4h94.4c1 5 1.6 10.1 1.6 16.6 0 57.1-38.3 97.6-96 97.6zm220-81.8h-29v29h-29.2v-29h-29V245h29v-29H355v29h29v29.2z" />
+                                                    </svg>
+                                                    Google
+                                                </a>
+                                            </div>
+                                            <div class="social_link small">
+                                                <a href="http://" class="text-decoration-none link_color 
+                                d-flex align-items-center small" data-toggle="tooltip" data-placement="top"
+                                                    title="Linkedin Verified">
+                                                    <svg class="me-1" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                        <path
+                                                            d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                                                    </svg>
+                                                    Linkedin
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="px-2 py-1 py-lg-0 py-xl-0 py-xxl-0">
+
+                                            <div class="franchise_img my-1 d-flex justify-content-center"
+                                                style="width:200px; height:110px">
+                                                <img src="../base/images/media.jpg" class="img-fluid w-100 h-100"
+                                                    alt="">
+                                            </div>
+                                            <p class="card-text py-2  mb-0 small">
+                                                Dummy franchise data to check the cards.Giving short
+                                                description of franchise here as link. </p>
+                                        </div>
+
+                                        <div class="px-3 pb-2 d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" width="12"
+                                                    height="12" viewBox="0 0 576 512">
+                                                    <path
+                                                        d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"
+                                                        fill="#FFA500" />
+                                                </svg>
+                                                <span class="small">9.5</span>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" width="12"
+                                                    height="12" viewBox="0 0 384 512">
+                                                    <path
+                                                        d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"
+                                                        fill="red" />
+                                                </svg>
+                                                <span class="small">Expanding in Oman</span>
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            class="px-2 py-2 my-2 my-lg-1 my-xl-0 my-xxl-0 py-lg-1 py-xl-1 py-xxl-1 d-flex  flex-column  justify-content-center bg-light">
+                                            <div class="d-flex justify-content-between m-0 p-0 mb-1">
+                                                <p class="medium_text m-0 p-0 small">Exp. Monthly Sales
+                                                    <span data-toggle="tooltip" data-placement="right"
+                                                        title="This is expected real values may varry slightly">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="m_up" width="10"
+                                                            height="10" viewBox="0 0 512 512">
+                                                            <path
+                                                                d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z" />
+                                                        </svg>
+                                                    </span>
+                                                </p>
+                                                <p class="medium_text p-0 m-0 small">AED 90000</p>
+                                            </div>
+
+                                            <div class="d-flex  justify-content-between p-0 m-0">
+                                                <p class="medium_text m-0 p-0 small">Space Required
+                                                    <span data-toggle="tooltip" data-placement="right"
+                                                        title="Space is required to setup the franchise knowing this in advance is important for establishment of franchise.">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="m_up" width="10"
+                                                            height="10" viewBox="0 0 512 512">
+                                                            <path
+                                                                d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z" />
+                                                        </svg>
+                                                    </span>
+                                                </p>
+                                                <p class="medium_text p-0 m-0 small">1000-3000 Sq. Ft</p>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="px-3 d-flex justify-content-between">
+                                            <div class="">
+                                                <a href=""
+                                                    class="text-decoration-none link_color small fw-bold">Investment
+                                                    Size </a>
+                                                <p class="link_color small"> AED <b class="fs-6">5000</b> For <b
+                                                        class="fs-6">30%</b></p>
+                                            </div>
+                                            <div class="">
+                                                <a role="button" class="btn btn-sm official_bg text-white mt-2">Send
+                                                    Proposal</a>
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide col-md-4 h-75 col-sm-12 mb-sm-4 bg-white my-4">
+                            <div class="mb-4 d-flex align-items-stretch">
+                                <div class="card border_huntment py-2 py-lg-0 py-xl-0 py-xxl-0">
+                                    <div class="card-body p-0 d-flex flex-column">
+                                        <div class="border-bottom px-2 py-2">
+                                            <h6 class="card-title lg_text m-0">Franchise title goes here it should be
+                                                link</h6>
+                                            <a href="http://" class="text-decoration-none small
+                                  link_color">Hightlighting line about the Franchise. </a>
+                                        </div>
+                                        <div class="social_info
+                                 d-flex align-items-center justify-content-between px-2 
+                                 py-3 py-lg-2 py-xl-2 py-xxl-2 small">
+                                            <div class="social_link card_inner small">
+                                                <a href="http://" class="text-decoration-none small link_color 
+                                    d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                                                    title="Email Verified">
+                                                    <svg class="me-1" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                        <path
+                                                            d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z" />
+                                                    </svg>
+                                                    Official Email
+                                                </a>
+                                            </div>
+                                            <div class="social_link card_inner small">
+                                                <a href="http://" class="text-decoration-none 
+                                    link_color d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                                                    title="Phone Verified">
+                                                    <svg class="me-1" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                        <path
+                                                            d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z" />
+                                                    </svg>
+                                                    Phone
+                                                </a>
+                                            </div>
+                                            <div class="social_link small">
+                                                <a href="http://" class="text-decoration-none 
+                                    unverified_link d-flex align-items-center" data-toggle="tooltip"
+                                                    data-placement="top" title="Google Unverified">
+                                                    <svg class="me-1 unverified_link" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                        <path
+                                                            d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM164 356c-55.3 0-100-44.7-100-100s44.7-100 100-100c27 0 49.5 9.8 67 26.2l-27.1 26.1c-7.4-7.1-20.3-15.4-39.8-15.4-34.1 0-61.9 28.2-61.9 63.2 0 34.9 27.8 63.2 61.9 63.2 39.6 0 54.4-28.5 56.8-43.1H164v-34.4h94.4c1 5 1.6 10.1 1.6 16.6 0 57.1-38.3 97.6-96 97.6zm220-81.8h-29v29h-29.2v-29h-29V245h29v-29H355v29h29v29.2z" />
+                                                    </svg>
+                                                    Google
+                                                </a>
+                                            </div>
+                                            <div class="social_link small">
+                                                <a href="http://" class="text-decoration-none link_color 
+                                    d-flex align-items-center small" data-toggle="tooltip" data-placement="top"
+                                                    title="Linkedin Verified">
+                                                    <svg class="me-1" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                        <path
+                                                            d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                                                    </svg>
+                                                    Linkedin
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="px-2 py-1 py-lg-0 py-xl-0 py-xxl-0">
+
+                                            <div class="franchise_img my-1 d-flex justify-content-center"
+                                                style="width:200px; height:110px">
+                                                <img src="../base/images/media.jpg" class="img-fluid w-100 h-100"
+                                                    alt="">
+                                            </div>
+                                            <p class="card-text py-2  mb-0 small">
+                                                Dummy franchise data to check the cards.Giving short
+                                                description of franchise here as link. </p>
+                                        </div>
+
+                                        <div class="px-3 pb-2 d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" width="12"
+                                                    height="12" viewBox="0 0 576 512">
+                                                    <path
+                                                        d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"
+                                                        fill="#FFA500" />
+                                                </svg>
+                                                <span class="small">9.5</span>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" width="12"
+                                                    height="12" viewBox="0 0 384 512">
+                                                    <path
+                                                        d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"
+                                                        fill="red" />
+                                                </svg>
+                                                <span class="small">Expanding in Oman</span>
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            class="px-2 py-2 my-2 my-lg-1 my-xl-0 my-xxl-0 py-lg-1 py-xl-1 py-xxl-1 d-flex  flex-column  justify-content-center bg-light">
+                                            <div class="d-flex justify-content-between m-0 p-0 mb-1">
+                                                <p class="medium_text m-0 p-0 small">Exp. Monthly Sales
+                                                    <span data-toggle="tooltip" data-placement="right"
+                                                        title="This is expected real values may varry slightly">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="m_up" width="10"
+                                                            height="10" viewBox="0 0 512 512">
+                                                            <path
+                                                                d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z" />
+                                                        </svg>
+                                                    </span>
+                                                </p>
+                                                <p class="medium_text p-0 m-0 small">AED 90000</p>
+                                            </div>
+
+                                            <div class="d-flex  justify-content-between p-0 m-0">
+                                                <p class="medium_text m-0 p-0 small">Space Required
+                                                    <span data-toggle="tooltip" data-placement="right"
+                                                        title="Space is required to setup the franchise knowing this in advance is important for establishment of franchise.">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="m_up" width="10"
+                                                            height="10" viewBox="0 0 512 512">
+                                                            <path
+                                                                d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z" />
+                                                        </svg>
+                                                    </span>
+                                                </p>
+                                                <p class="medium_text p-0 m-0 small">1000-3000 Sq. Ft</p>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="px-3 d-flex justify-content-between">
+                                            <div class="">
+                                                <a href=""
+                                                    class="text-decoration-none link_color small fw-bold">Investment
+                                                    Size </a>
+                                                <p class="link_color small"> AED <b class="fs-6">5000</b> For <b
+                                                        class="fs-6">30%</b></p>
+                                            </div>
+                                            <div class="">
+                                                <a role="button" class="btn btn-sm official_bg text-white mt-2">Send
+                                                    Proposal</a>
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide col-md-4 h-75 col-sm-12 mb-sm-4 bg-white my-4 ">
+                            <div class="mb-4 d-flex align-items-stretch">
+                                <div class="card border_huntment py-2 py-lg-0 py-xl-0 py-xxl-0">
+                                    <div class="card-body p-0 d-flex flex-column">
+                                        <div class="border-bottom px-2 py-2">
+                                            <h6 class="card-title lg_text m-0">Franchise title goes here it should be
+                                                link</h6>
+                                            <a href="http://" class="text-decoration-none small
+                                      link_color">Hightlighting line about the Franchise. </a>
+                                        </div>
+                                        <div class="social_info
+                                     d-flex align-items-center justify-content-between px-2 
+                                     py-3 py-lg-2 py-xl-2 py-xxl-2 small">
+                                            <div class="social_link card_inner small">
+                                                <a href="http://" class="text-decoration-none small link_color 
+                                        d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                                                    title="Email Verified">
+                                                    <svg class="me-1" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                        <path
+                                                            d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z" />
+                                                    </svg>
+                                                    Official Email
+                                                </a>
+                                            </div>
+                                            <div class="social_link card_inner small">
+                                                <a href="http://" class="text-decoration-none 
+                                        link_color d-flex align-items-center" data-toggle="tooltip"
+                                                    data-placement="top" title="Phone Verified">
+                                                    <svg class="me-1" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                        <path
+                                                            d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z" />
+                                                    </svg>
+                                                    Phone
+                                                </a>
+                                            </div>
+                                            <div class="social_link small">
+                                                <a href="http://" class="text-decoration-none 
+                                        unverified_link d-flex align-items-center" data-toggle="tooltip"
+                                                    data-placement="top" title="Google Unverified">
+                                                    <svg class="me-1 unverified_link" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                        <path
+                                                            d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM164 356c-55.3 0-100-44.7-100-100s44.7-100 100-100c27 0 49.5 9.8 67 26.2l-27.1 26.1c-7.4-7.1-20.3-15.4-39.8-15.4-34.1 0-61.9 28.2-61.9 63.2 0 34.9 27.8 63.2 61.9 63.2 39.6 0 54.4-28.5 56.8-43.1H164v-34.4h94.4c1 5 1.6 10.1 1.6 16.6 0 57.1-38.3 97.6-96 97.6zm220-81.8h-29v29h-29.2v-29h-29V245h29v-29H355v29h29v29.2z" />
+                                                    </svg>
+                                                    Google
+                                                </a>
+                                            </div>
+                                            <div class="social_link small">
+                                                <a href="http://" class="text-decoration-none link_color 
+                                        d-flex align-items-center small" data-toggle="tooltip" data-placement="top"
+                                                    title="Linkedin Verified">
+                                                    <svg class="me-1" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                        <path
+                                                            d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                                                    </svg>
+                                                    Linkedin
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="px-2 py-1 py-lg-0 py-xl-0 py-xxl-0">
+
+                                            <div class="franchise_img my-1 d-flex justify-content-center"
+                                                style="width:200px; height:110px">
+                                                <img src="../base/images/media.jpg" class="img-fluid w-100 h-100"
+                                                    alt="">
+                                            </div>
+                                            <p class="card-text py-2  mb-0 small">
+                                                Dummy franchise data to check the cards.Giving short
+                                                description of franchise here as link. </p>
+                                        </div>
+
+                                        <div class="px-3 pb-2 d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" width="12"
+                                                    height="12" viewBox="0 0 576 512">
+                                                    <path
+                                                        d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"
+                                                        fill="#FFA500" />
+                                                </svg>
+                                                <span class="small">9.5</span>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" width="12"
+                                                    height="12" viewBox="0 0 384 512">
+                                                    <path
+                                                        d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"
+                                                        fill="red" />
+                                                </svg>
+                                                <span class="small">Expanding in Oman</span>
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            class="px-2 py-2 my-2 my-lg-1 my-xl-0 my-xxl-0 py-lg-1 py-xl-1 py-xxl-1 d-flex  flex-column  justify-content-center bg-light">
+                                            <div class="d-flex justify-content-between m-0 p-0 mb-1">
+                                                <p class="medium_text m-0 p-0 small">Exp. Monthly Sales
+                                                    <span data-toggle="tooltip" data-placement="right"
+                                                        title="This is expected real values may varry slightly">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="m_up" width="10"
+                                                            height="10" viewBox="0 0 512 512">
+                                                            <path
+                                                                d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z" />
+                                                        </svg>
+                                                    </span>
+                                                </p>
+                                                <p class="medium_text p-0 m-0 small">AED 90000</p>
+                                            </div>
+
+                                            <div class="d-flex  justify-content-between p-0 m-0">
+                                                <p class="medium_text m-0 p-0 small">Space Required
+                                                    <span data-toggle="tooltip" data-placement="right"
+                                                        title="Space is required to setup the franchise knowing this in advance is important for establishment of franchise.">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="m_up" width="10"
+                                                            height="10" viewBox="0 0 512 512">
+                                                            <path
+                                                                d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z" />
+                                                        </svg>
+                                                    </span>
+                                                </p>
+                                                <p class="medium_text p-0 m-0 small">1000-3000 Sq. Ft</p>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="px-3 d-flex justify-content-between">
+                                            <div class="">
+                                                <a href=""
+                                                    class="text-decoration-none link_color small fw-bold">Investment
+                                                    Size </a>
+                                                <p class="link_color small"> AED <b class="fs-6">5000</b> For <b
+                                                        class="fs-6">30%</b></p>
+                                            </div>
+                                            <div class="">
+                                                <a role="button" class="btn btn-sm official_bg text-white mt-2">Send
+                                                    Proposal</a>
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide col-md-4 h-75 col-sm-12 mb-sm-4 bg-white my-4 ">
+                            <div class="mb-4 d-flex align-items-stretch">
+                                <div class="card border_huntment py-2 py-lg-0 py-xl-0 py-xxl-0">
+                                    <div class="card-body p-0 d-flex flex-column">
+                                        <div class="border-bottom px-2 py-2">
+                                            <h6 class="card-title lg_text m-0">Franchise title goes here it should be
+                                                link</h6>
+                                            <a href="http://" class="text-decoration-none small
+                                          link_color">Hightlighting line about the Franchise. </a>
+                                        </div>
+                                        <div class="social_info
+                                         d-flex align-items-center justify-content-between px-2 
+                                         py-3 py-lg-2 py-xl-2 py-xxl-2 small">
+                                            <div class="social_link card_inner small">
+                                                <a href="http://" class="text-decoration-none small link_color 
+                                            d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                                                    title="Email Verified">
+                                                    <svg class="me-1" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                        <path
+                                                            d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z" />
+                                                    </svg>
+                                                    Official Email
+                                                </a>
+                                            </div>
+                                            <div class="social_link card_inner small">
+                                                <a href="http://" class="text-decoration-none 
+                                            link_color d-flex align-items-center" data-toggle="tooltip"
+                                                    data-placement="top" title="Phone Verified">
+                                                    <svg class="me-1" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                        <path
+                                                            d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z" />
+                                                    </svg>
+                                                    Phone
+                                                </a>
+                                            </div>
+                                            <div class="social_link small">
+                                                <a href="http://" class="text-decoration-none 
+                                            unverified_link d-flex align-items-center" data-toggle="tooltip"
+                                                    data-placement="top" title="Google Unverified">
+                                                    <svg class="me-1 unverified_link" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                        <path
+                                                            d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM164 356c-55.3 0-100-44.7-100-100s44.7-100 100-100c27 0 49.5 9.8 67 26.2l-27.1 26.1c-7.4-7.1-20.3-15.4-39.8-15.4-34.1 0-61.9 28.2-61.9 63.2 0 34.9 27.8 63.2 61.9 63.2 39.6 0 54.4-28.5 56.8-43.1H164v-34.4h94.4c1 5 1.6 10.1 1.6 16.6 0 57.1-38.3 97.6-96 97.6zm220-81.8h-29v29h-29.2v-29h-29V245h29v-29H355v29h29v29.2z" />
+                                                    </svg>
+                                                    Google
+                                                </a>
+                                            </div>
+                                            <div class="social_link small">
+                                                <a href="http://" class="text-decoration-none link_color 
+                                            d-flex align-items-center small" data-toggle="tooltip" data-placement="top"
+                                                    title="Linkedin Verified">
+                                                    <svg class="me-1" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                        <path
+                                                            d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                                                    </svg>
+                                                    Linkedin
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="px-2 py-1 py-lg-0 py-xl-0 py-xxl-0">
+
+                                            <div class="franchise_img my-1 d-flex justify-content-center"
+                                                style="width:200px; height:110px">
+                                                <img src="../base/images/media.jpg" class="img-fluid w-100 h-100"
+                                                    alt="">
+                                            </div>
+                                            <p class="card-text py-2  mb-0 small">
+                                                Dummy franchise data to check the cards.Giving short
+                                                description of franchise here as link. </p>
+                                        </div>
+
+                                        <div class="px-3 pb-2 d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" width="12"
+                                                    height="12" viewBox="0 0 576 512">
+                                                    <path
+                                                        d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"
+                                                        fill="#FFA500" />
+                                                </svg>
+                                                <span class="small">9.5</span>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" width="12"
+                                                    height="12" viewBox="0 0 384 512">
+                                                    <path
+                                                        d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"
+                                                        fill="red" />
+                                                </svg>
+                                                <span class="small">Expanding in Oman</span>
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            class="px-2 py-2 my-2 my-lg-1 my-xl-0 my-xxl-0 py-lg-1 py-xl-1 py-xxl-1 d-flex  flex-column  justify-content-center bg-light">
+                                            <div class="d-flex justify-content-between m-0 p-0 mb-1">
+                                                <p class="medium_text m-0 p-0 small">Exp. Monthly Sales
+                                                    <span data-toggle="tooltip" data-placement="right"
+                                                        title="This is expected real values may varry slightly">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="m_up" width="10"
+                                                            height="10" viewBox="0 0 512 512">
+                                                            <path
+                                                                d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z" />
+                                                        </svg>
+                                                    </span>
+                                                </p>
+                                                <p class="medium_text p-0 m-0 small">AED 90000</p>
+                                            </div>
+
+                                            <div class="d-flex  justify-content-between p-0 m-0">
+                                                <p class="medium_text m-0 p-0 small">Space Required
+                                                    <span data-toggle="tooltip" data-placement="right"
+                                                        title="Space is required to setup the franchise knowing this in advance is important for establishment of franchise.">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="m_up" width="10"
+                                                            height="10" viewBox="0 0 512 512">
+                                                            <path
+                                                                d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z" />
+                                                        </svg>
+                                                    </span>
+                                                </p>
+                                                <p class="medium_text p-0 m-0 small">1000-3000 Sq. Ft</p>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="px-3 d-flex justify-content-between">
+                                            <div class="">
+                                                <a href=""
+                                                    class="text-decoration-none link_color small fw-bold">Investment
+                                                    Size </a>
+                                                <p class="link_color small"> AED <b class="fs-6">5000</b> For <b
+                                                        class="fs-6">30%</b></p>
+                                            </div>
+                                            <div class="">
+                                                <a role="button" class="btn btn-sm official_bg text-white mt-2">Send
+                                                    Proposal</a>
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide col-md-4 h-75 col-sm-12 mb-sm-4 bg-white my-4 ">
+                            <div class="mb-4 d-flex align-items-stretch">
+                                <div class="card border_huntment py-2 py-lg-0 py-xl-0 py-xxl-0">
+                                    <div class="card-body p-0 d-flex flex-column">
+                                        <div class="border-bottom px-2 py-2">
+                                            <h6 class="card-title lg_text m-0">Franchise title goes here it should be
+                                                link</h6>
+                                            <a href="http://" class="text-decoration-none small
+                                              link_color">Hightlighting line about the Franchise. </a>
+                                        </div>
+                                        <div class="social_info
+                                             d-flex align-items-center justify-content-between px-2 
+                                             py-3 py-lg-2 py-xl-2 py-xxl-2 small">
+                                            <div class="social_link card_inner small">
+                                                <a href="http://" class="text-decoration-none small link_color 
+                                                d-flex align-items-center" data-toggle="tooltip" data-placement="top"
+                                                    title="Email Verified">
+                                                    <svg class="me-1" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                        <path
+                                                            d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z" />
+                                                    </svg>
+                                                    Official Email
+                                                </a>
+                                            </div>
+                                            <div class="social_link card_inner small">
+                                                <a href="http://" class="text-decoration-none 
+                                                link_color d-flex align-items-center" data-toggle="tooltip"
+                                                    data-placement="top" title="Phone Verified">
+                                                    <svg class="me-1" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                        <path
+                                                            d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z" />
+                                                    </svg>
+                                                    Phone
+                                                </a>
+                                            </div>
+                                            <div class="social_link small">
+                                                <a href="http://" class="text-decoration-none 
+                                                unverified_link d-flex align-items-center" data-toggle="tooltip"
+                                                    data-placement="top" title="Google Unverified">
+                                                    <svg class="me-1 unverified_link" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                        <path
+                                                            d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM164 356c-55.3 0-100-44.7-100-100s44.7-100 100-100c27 0 49.5 9.8 67 26.2l-27.1 26.1c-7.4-7.1-20.3-15.4-39.8-15.4-34.1 0-61.9 28.2-61.9 63.2 0 34.9 27.8 63.2 61.9 63.2 39.6 0 54.4-28.5 56.8-43.1H164v-34.4h94.4c1 5 1.6 10.1 1.6 16.6 0 57.1-38.3 97.6-96 97.6zm220-81.8h-29v29h-29.2v-29h-29V245h29v-29H355v29h29v29.2z" />
+                                                    </svg>
+                                                    Google
+                                                </a>
+                                            </div>
+                                            <div class="social_link small">
+                                                <a href="http://" class="text-decoration-none link_color 
+                                                d-flex align-items-center small" data-toggle="tooltip"
+                                                    data-placement="top" title="Linkedin Verified">
+                                                    <svg class="me-1" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                        <path
+                                                            d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                                                    </svg>
+                                                    Linkedin
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="px-2 py-1 py-lg-0 py-xl-0 py-xxl-0">
+
+                                            <div class="franchise_img my-1 d-flex justify-content-center"
+                                                style="width:200px; height:110px">
+                                                <img src="../base/images/media.jpg" class="img-fluid w-100 h-100"
+                                                    alt="">
+                                            </div>
+                                            <p class="card-text py-2  mb-0 small">
+                                                Dummy franchise data to check the cards.Giving short
+                                                description of franchise here as link. </p>
+                                        </div>
+
+                                        <div class="px-3 pb-2 d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" width="12"
+                                                    height="12" viewBox="0 0 576 512">
+                                                    <path
+                                                        d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"
+                                                        fill="#FFA500" />
+                                                </svg>
+                                                <span class="small">9.5</span>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" width="12"
+                                                    height="12" viewBox="0 0 384 512">
+                                                    <path
+                                                        d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"
+                                                        fill="red" />
+                                                </svg>
+                                                <span class="small">Expanding in Oman</span>
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            class="px-2 py-2 my-2 my-lg-1 my-xl-0 my-xxl-0 py-lg-1 py-xl-1 py-xxl-1 d-flex  flex-column  justify-content-center bg-light">
+                                            <div class="d-flex justify-content-between m-0 p-0 mb-1">
+                                                <p class="medium_text m-0 p-0 small">Exp. Monthly Sales
+                                                    <span data-toggle="tooltip" data-placement="right"
+                                                        title="This is expected real values may varry slightly">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="m_up" width="10"
+                                                            height="10" viewBox="0 0 512 512">
+                                                            <path
+                                                                d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z" />
+                                                        </svg>
+                                                    </span>
+                                                </p>
+                                                <p class="medium_text p-0 m-0 small">AED 90000</p>
+                                            </div>
+
+                                            <div class="d-flex  justify-content-between p-0 m-0">
+                                                <p class="medium_text m-0 p-0 small">Space Required
+                                                    <span data-toggle="tooltip" data-placement="right"
+                                                        title="Space is required to setup the franchise knowing this in advance is important for establishment of franchise.">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="m_up" width="10"
+                                                            height="10" viewBox="0 0 512 512">
+                                                            <path
+                                                                d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z" />
+                                                        </svg>
+                                                    </span>
+                                                </p>
+                                                <p class="medium_text p-0 m-0 small">1000-3000 Sq. Ft</p>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="px-3 d-flex justify-content-between">
+                                            <div class="">
+                                                <a href=""
+                                                    class="text-decoration-none link_color small fw-bold">Investment
+                                                    Size </a>
+                                                <p class="link_color small"> AED <b class="fs-6">5000</b> For <b
+                                                        class="fs-6">30%</b></p>
+                                            </div>
+                                            <div class="">
+                                                <a role="button" class="btn btn-sm official_bg text-white mt-2">Send
+                                                    Proposal</a>
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide col-md-4 h-75 col-sm-12 mb-sm-4 bg-white my-4 ">
+                            <div class="mb-4 d-flex align-items-stretch">
+                                <div class="card border_huntment py-2 py-lg-0 py-xl-0 py-xxl-0">
+                                    <div class="card-body p-0 d-flex flex-column">
+                                        <div class="border-bottom px-2 py-2">
+                                            <h6 class="card-title lg_text m-0">Franchise title goes here it should be
+                                                link</h6>
+                                            <a href="http://" class="text-decoration-none small
+                                                  link_color">Hightlighting line about the Franchise. </a>
+                                        </div>
+                                        <div class="social_info
+                                                 d-flex align-items-center justify-content-between px-2 
+                                                 py-3 py-lg-2 py-xl-2 py-xxl-2 small">
+                                            <div class="social_link card_inner small">
+                                                <a href="http://" class="text-decoration-none small link_color 
+                                                    d-flex align-items-center" data-toggle="tooltip"
+                                                    data-placement="top" title="Email Verified">
+                                                    <svg class="me-1" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                        <path
+                                                            d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z" />
+                                                    </svg>
+                                                    Official Email
+                                                </a>
+                                            </div>
+                                            <div class="social_link card_inner small">
+                                                <a href="http://" class="text-decoration-none 
+                                                    link_color d-flex align-items-center" data-toggle="tooltip"
+                                                    data-placement="top" title="Phone Verified">
+                                                    <svg class="me-1" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                        <path
+                                                            d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z" />
+                                                    </svg>
+                                                    Phone
+                                                </a>
+                                            </div>
+                                            <div class="social_link small">
+                                                <a href="http://" class="text-decoration-none 
+                                                    unverified_link d-flex align-items-center" data-toggle="tooltip"
+                                                    data-placement="top" title="Google Unverified">
+                                                    <svg class="me-1 unverified_link" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                        <path
+                                                            d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM164 356c-55.3 0-100-44.7-100-100s44.7-100 100-100c27 0 49.5 9.8 67 26.2l-27.1 26.1c-7.4-7.1-20.3-15.4-39.8-15.4-34.1 0-61.9 28.2-61.9 63.2 0 34.9 27.8 63.2 61.9 63.2 39.6 0 54.4-28.5 56.8-43.1H164v-34.4h94.4c1 5 1.6 10.1 1.6 16.6 0 57.1-38.3 97.6-96 97.6zm220-81.8h-29v29h-29.2v-29h-29V245h29v-29H355v29h29v29.2z" />
+                                                    </svg>
+                                                    Google
+                                                </a>
+                                            </div>
+                                            <div class="social_link small">
+                                                <a href="http://" class="text-decoration-none link_color 
+                                                    d-flex align-items-center small" data-toggle="tooltip"
+                                                    data-placement="top" title="Linkedin Verified">
+                                                    <svg class="me-1" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                        <path
+                                                            d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                                                    </svg>
+                                                    Linkedin
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="px-2 py-1 py-lg-0 py-xl-0 py-xxl-0">
+
+                                            <div class="franchise_img my-1 d-flex justify-content-center"
+                                                style="width:200px; height:110px">
+                                                <img src="../base/images/media.jpg" class="img-fluid w-100 h-100"
+                                                    alt="">
+                                            </div>
+                                            <p class="card-text py-2  mb-0 small">
+                                                Dummy franchise data to check the cards.Giving short
+                                                description of franchise here as link. </p>
+                                        </div>
+
+                                        <div class="px-3 pb-2 d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" width="12"
+                                                    height="12" viewBox="0 0 576 512">
+                                                    <path
+                                                        d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"
+                                                        fill="#FFA500" />
+                                                </svg>
+                                                <span class="small">9.5</span>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" width="12"
+                                                    height="12" viewBox="0 0 384 512">
+                                                    <path
+                                                        d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"
+                                                        fill="red" />
+                                                </svg>
+                                                <span class="small">Expanding in Oman</span>
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            class="px-2 py-2 my-2 my-lg-1 my-xl-0 my-xxl-0 py-lg-1 py-xl-1 py-xxl-1 d-flex  flex-column  justify-content-center bg-light">
+                                            <div class="d-flex justify-content-between m-0 p-0 mb-1">
+                                                <p class="medium_text m-0 p-0 small">Exp. Monthly Sales
+                                                    <span data-toggle="tooltip" data-placement="right"
+                                                        title="This is expected real values may varry slightly">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="m_up" width="10"
+                                                            height="10" viewBox="0 0 512 512">
+                                                            <path
+                                                                d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z" />
+                                                        </svg>
+                                                    </span>
+                                                </p>
+                                                <p class="medium_text p-0 m-0 small">AED 90000</p>
+                                            </div>
+
+                                            <div class="d-flex  justify-content-between p-0 m-0">
+                                                <p class="medium_text m-0 p-0 small">Space Required
+                                                    <span data-toggle="tooltip" data-placement="right"
+                                                        title="Space is required to setup the franchise knowing this in advance is important for establishment of franchise.">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="m_up" width="10"
+                                                            height="10" viewBox="0 0 512 512">
+                                                            <path
+                                                                d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z" />
+                                                        </svg>
+                                                    </span>
+                                                </p>
+                                                <p class="medium_text p-0 m-0 small">1000-3000 Sq. Ft</p>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="px-3 d-flex justify-content-between">
+                                            <div class="">
+                                                <a href=""
+                                                    class="text-decoration-none link_color small fw-bold">Investment
+                                                    Size </a>
+                                                <p class="link_color small"> AED <b class="fs-6">5000</b> For <b
+                                                        class="fs-6">30%</b></p>
+                                            </div>
+                                            <div class="">
+                                                <a role="button" class="btn btn-sm official_bg text-white mt-2">Send
+                                                    Proposal</a>
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide col-md-4 h-75 col-sm-12 mb-sm-4 bg-white my-4 ">
+                            <div class="mb-4 d-flex align-items-stretch">
+                                <div class="card border_huntment py-2 py-lg-0 py-xl-0 py-xxl-0">
+                                    <div class="card-body p-0 d-flex flex-column">
+                                        <div class="border-bottom px-2 py-2">
+                                            <h6 class="card-title lg_text m-0">Franchise title goes here it should be
+                                                link</h6>
+                                            <a href="http://" class="text-decoration-none small
+                                                      link_color">Hightlighting line about the Franchise. </a>
+                                        </div>
+                                        <div class="social_info
+                                                     d-flex align-items-center justify-content-between px-2 
+                                                     py-3 py-lg-2 py-xl-2 py-xxl-2 small">
+                                            <div class="social_link card_inner small">
+                                                <a href="http://" class="text-decoration-none small link_color 
+                                                        d-flex align-items-center" data-toggle="tooltip"
+                                                    data-placement="top" title="Email Verified">
+                                                    <svg class="me-1" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                        <path
+                                                            d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z" />
+                                                    </svg>
+                                                    Official Email
+                                                </a>
+                                            </div>
+                                            <div class="social_link card_inner small">
+                                                <a href="http://" class="text-decoration-none 
+                                                        link_color d-flex align-items-center" data-toggle="tooltip"
+                                                    data-placement="top" title="Phone Verified">
+                                                    <svg class="me-1" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                        <path
+                                                            d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z" />
+                                                    </svg>
+                                                    Phone
+                                                </a>
+                                            </div>
+                                            <div class="social_link small">
+                                                <a href="http://" class="text-decoration-none 
+                                                        unverified_link d-flex align-items-center"
+                                                    data-toggle="tooltip" data-placement="top"
+                                                    title="Google Unverified">
+                                                    <svg class="me-1 unverified_link" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                        <path
+                                                            d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM164 356c-55.3 0-100-44.7-100-100s44.7-100 100-100c27 0 49.5 9.8 67 26.2l-27.1 26.1c-7.4-7.1-20.3-15.4-39.8-15.4-34.1 0-61.9 28.2-61.9 63.2 0 34.9 27.8 63.2 61.9 63.2 39.6 0 54.4-28.5 56.8-43.1H164v-34.4h94.4c1 5 1.6 10.1 1.6 16.6 0 57.1-38.3 97.6-96 97.6zm220-81.8h-29v29h-29.2v-29h-29V245h29v-29H355v29h29v29.2z" />
+                                                    </svg>
+                                                    Google
+                                                </a>
+                                            </div>
+                                            <div class="social_link small">
+                                                <a href="http://" class="text-decoration-none link_color 
+                                                        d-flex align-items-center small" data-toggle="tooltip"
+                                                    data-placement="top" title="Linkedin Verified">
+                                                    <svg class="me-1" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                        <path
+                                                            d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                                                    </svg>
+                                                    Linkedin
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="px-2 py-1 py-lg-0 py-xl-0 py-xxl-0">
+
+                                            <div class="franchise_img my-1 d-flex justify-content-center"
+                                                style="width:200px; height:110px">
+                                                <img src="../base/images/media.jpg" class="img-fluid w-100 h-100"
+                                                    alt="">
+                                            </div>
+                                            <p class="card-text py-2  mb-0 small">
+                                                Dummy franchise data to check the cards.Giving short
+                                                description of franchise here as link. </p>
+                                        </div>
+
+                                        <div class="px-3 pb-2 d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" width="12"
+                                                    height="12" viewBox="0 0 576 512">
+                                                    <path
+                                                        d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"
+                                                        fill="#FFA500" />
+                                                </svg>
+                                                <span class="small">9.5</span>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" width="12"
+                                                    height="12" viewBox="0 0 384 512">
+                                                    <path
+                                                        d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"
+                                                        fill="red" />
+                                                </svg>
+                                                <span class="small">Expanding in Oman</span>
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            class="px-2 py-2 my-2 my-lg-1 my-xl-0 my-xxl-0 py-lg-1 py-xl-1 py-xxl-1 d-flex  flex-column  justify-content-center bg-light">
+                                            <div class="d-flex justify-content-between m-0 p-0 mb-1">
+                                                <p class="medium_text m-0 p-0 small">Exp. Monthly Sales
+                                                    <span data-toggle="tooltip" data-placement="right"
+                                                        title="This is expected real values may varry slightly">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="m_up" width="10"
+                                                            height="10" viewBox="0 0 512 512">
+                                                            <path
+                                                                d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z" />
+                                                        </svg>
+                                                    </span>
+                                                </p>
+                                                <p class="medium_text p-0 m-0 small">AED 90000</p>
+                                            </div>
+
+                                            <div class="d-flex  justify-content-between p-0 m-0">
+                                                <p class="medium_text m-0 p-0 small">Space Required
+                                                    <span data-toggle="tooltip" data-placement="right"
+                                                        title="Space is required to setup the franchise knowing this in advance is important for establishment of franchise.">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="m_up" width="10"
+                                                            height="10" viewBox="0 0 512 512">
+                                                            <path
+                                                                d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z" />
+                                                        </svg>
+                                                    </span>
+                                                </p>
+                                                <p class="medium_text p-0 m-0 small">1000-3000 Sq. Ft</p>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="px-3 d-flex justify-content-between">
+                                            <div class="">
+                                                <a href=""
+                                                    class="text-decoration-none link_color small fw-bold">Investment
+                                                    Size </a>
+                                                <p class="link_color small"> AED <b class="fs-6">5000</b> For <b
+                                                        class="fs-6">30%</b></p>
+                                            </div>
+                                            <div class="">
+                                                <a role="button" class="btn btn-sm official_bg text-white mt-2">Send
+                                                    Proposal</a>
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide col-md-4 h-75 col-sm-12 mb-sm-4 bg-white my-4 ">
+                            <div class="mb-4 d-flex align-items-stretch">
+                                <div class="card border_huntment py-2 py-lg-0 py-xl-0 py-xxl-0">
+                                    <div class="card-body p-0 d-flex flex-column">
+                                        <div class="border-bottom px-2 py-2">
+                                            <h6 class="card-title lg_text m-0">Franchise title goes here it should be
+                                                link</h6>
+                                            <a href="http://" class="text-decoration-none small
+                                                          link_color">Hightlighting line about the Franchise. </a>
+                                        </div>
+                                        <div class="social_info
+                                                         d-flex align-items-center justify-content-between px-2 
+                                                         py-3 py-lg-2 py-xl-2 py-xxl-2 small">
+                                            <div class="social_link card_inner small">
+                                                <a href="http://" class="text-decoration-none small link_color 
+                                                            d-flex align-items-center" data-toggle="tooltip"
+                                                    data-placement="top" title="Email Verified">
+                                                    <svg class="me-1" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                        <path
+                                                            d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z" />
+                                                    </svg>
+                                                    Official Email
+                                                </a>
+                                            </div>
+                                            <div class="social_link card_inner small">
+                                                <a href="http://" class="text-decoration-none 
+                                                            link_color d-flex align-items-center" data-toggle="tooltip"
+                                                    data-placement="top" title="Phone Verified">
+                                                    <svg class="me-1" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                        <path
+                                                            d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z" />
+                                                    </svg>
+                                                    Phone
+                                                </a>
+                                            </div>
+                                            <div class="social_link small">
+                                                <a href="http://" class="text-decoration-none 
+                                                            unverified_link d-flex align-items-center"
+                                                    data-toggle="tooltip" data-placement="top"
+                                                    title="Google Unverified">
+                                                    <svg class="me-1 unverified_link" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                        <path
+                                                            d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM164 356c-55.3 0-100-44.7-100-100s44.7-100 100-100c27 0 49.5 9.8 67 26.2l-27.1 26.1c-7.4-7.1-20.3-15.4-39.8-15.4-34.1 0-61.9 28.2-61.9 63.2 0 34.9 27.8 63.2 61.9 63.2 39.6 0 54.4-28.5 56.8-43.1H164v-34.4h94.4c1 5 1.6 10.1 1.6 16.6 0 57.1-38.3 97.6-96 97.6zm220-81.8h-29v29h-29.2v-29h-29V245h29v-29H355v29h29v29.2z" />
+                                                    </svg>
+                                                    Google
+                                                </a>
+                                            </div>
+                                            <div class="social_link small">
+                                                <a href="http://" class="text-decoration-none link_color 
+                                                            d-flex align-items-center small" data-toggle="tooltip"
+                                                    data-placement="top" title="Linkedin Verified">
+                                                    <svg class="me-1" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                        <path
+                                                            d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                                                    </svg>
+                                                    Linkedin
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="px-2 py-1 py-lg-0 py-xl-0 py-xxl-0">
+
+                                            <div class="franchise_img my-1 d-flex justify-content-center"
+                                                style="width:200px; height:110px">
+                                                <img src="../base/images/media.jpg" class="img-fluid w-100 h-100"
+                                                    alt="">
+                                            </div>
+                                            <p class="card-text py-2  mb-0 small">
+                                                Dummy franchise data to check the cards.Giving short
+                                                description of franchise here as link. </p>
+                                        </div>
+
+                                        <div class="px-3 pb-2 d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" width="12"
+                                                    height="12" viewBox="0 0 576 512">
+                                                    <path
+                                                        d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"
+                                                        fill="#FFA500" />
+                                                </svg>
+                                                <span class="small">9.5</span>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" width="12"
+                                                    height="12" viewBox="0 0 384 512">
+                                                    <path
+                                                        d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"
+                                                        fill="red" />
+                                                </svg>
+                                                <span class="small">Expanding in Oman</span>
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            class="px-2 py-2 my-2 my-lg-1 my-xl-0 my-xxl-0 py-lg-1 py-xl-1 py-xxl-1 d-flex  flex-column  justify-content-center bg-light">
+                                            <div class="d-flex justify-content-between m-0 p-0 mb-1">
+                                                <p class="medium_text m-0 p-0 small">Exp. Monthly Sales
+                                                    <span data-toggle="tooltip" data-placement="right"
+                                                        title="This is expected real values may varry slightly">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="m_up" width="10"
+                                                            height="10" viewBox="0 0 512 512">
+                                                            <path
+                                                                d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z" />
+                                                        </svg>
+                                                    </span>
+                                                </p>
+                                                <p class="medium_text p-0 m-0 small">AED 90000</p>
+                                            </div>
+
+                                            <div class="d-flex  justify-content-between p-0 m-0">
+                                                <p class="medium_text m-0 p-0 small">Space Required
+                                                    <span data-toggle="tooltip" data-placement="right"
+                                                        title="Space is required to setup the franchise knowing this in advance is important for establishment of franchise.">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="m_up" width="10"
+                                                            height="10" viewBox="0 0 512 512">
+                                                            <path
+                                                                d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z" />
+                                                        </svg>
+                                                    </span>
+                                                </p>
+                                                <p class="medium_text p-0 m-0 small">1000-3000 Sq. Ft</p>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="px-3 d-flex justify-content-between">
+                                            <div class="">
+                                                <a href=""
+                                                    class="text-decoration-none link_color small fw-bold">Investment
+                                                    Size </a>
+                                                <p class="link_color small"> AED <b class="fs-6">5000</b> For <b
+                                                        class="fs-6">30%</b></p>
+                                            </div>
+                                            <div class="">
+                                                <a role="button" class="btn btn-sm official_bg text-white mt-2">Send
+                                                    Proposal</a>
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide col-md-4 h-75 col-sm-12 mb-sm-4 bg-white my-4 ">
+                            <div class="mb-4 d-flex align-items-stretch">
+                                <div class="card border_huntment py-2 py-lg-0 py-xl-0 py-xxl-0">
+                                    <div class="card-body p-0 d-flex flex-column">
+                                        <div class="border-bottom px-2 py-2">
+                                            <h6 class="card-title lg_text m-0">Franchise title goes here it should be
+                                                link</h6>
+                                            <a href="http://" class="text-decoration-none small
+                                                              link_color">Hightlighting line about the Franchise. </a>
+                                        </div>
+                                        <div class="social_info
+                                                             d-flex align-items-center justify-content-between px-2 
+                                                             py-3 py-lg-2 py-xl-2 py-xxl-2 small">
+                                            <div class="social_link card_inner small">
+                                                <a href="http://" class="text-decoration-none small link_color 
+                                                                d-flex align-items-center" data-toggle="tooltip"
+                                                    data-placement="top" title="Email Verified">
+                                                    <svg class="me-1" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                        <path
+                                                            d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z" />
+                                                    </svg>
+                                                    Official Email
+                                                </a>
+                                            </div>
+                                            <div class="social_link card_inner small">
+                                                <a href="http://" class="text-decoration-none 
+                                                                link_color d-flex align-items-center"
+                                                    data-toggle="tooltip" data-placement="top" title="Phone Verified">
+                                                    <svg class="me-1" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                        <path
+                                                            d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z" />
+                                                    </svg>
+                                                    Phone
+                                                </a>
+                                            </div>
+                                            <div class="social_link small">
+                                                <a href="http://" class="text-decoration-none 
+                                                                unverified_link d-flex align-items-center"
+                                                    data-toggle="tooltip" data-placement="top"
+                                                    title="Google Unverified">
+                                                    <svg class="me-1 unverified_link" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                        <path
+                                                            d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM164 356c-55.3 0-100-44.7-100-100s44.7-100 100-100c27 0 49.5 9.8 67 26.2l-27.1 26.1c-7.4-7.1-20.3-15.4-39.8-15.4-34.1 0-61.9 28.2-61.9 63.2 0 34.9 27.8 63.2 61.9 63.2 39.6 0 54.4-28.5 56.8-43.1H164v-34.4h94.4c1 5 1.6 10.1 1.6 16.6 0 57.1-38.3 97.6-96 97.6zm220-81.8h-29v29h-29.2v-29h-29V245h29v-29H355v29h29v29.2z" />
+                                                    </svg>
+                                                    Google
+                                                </a>
+                                            </div>
+                                            <div class="social_link small">
+                                                <a href="http://" class="text-decoration-none link_color 
+                                                                d-flex align-items-center small" data-toggle="tooltip"
+                                                    data-placement="top" title="Linkedin Verified">
+                                                    <svg class="me-1" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                        <path
+                                                            d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                                                    </svg>
+                                                    Linkedin
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="px-2 py-1 py-lg-0 py-xl-0 py-xxl-0">
+
+                                            <div class="franchise_img my-1 d-flex justify-content-center"
+                                                style="width:200px; height:110px">
+                                                <img src="../base/images/media.jpg" class="img-fluid w-100 h-100"
+                                                    alt="">
+                                            </div>
+                                            <p class="card-text py-2  mb-0 small">
+                                                Dummy franchise data to check the cards.Giving short
+                                                description of franchise here as link. </p>
+                                        </div>
+
+                                        <div class="px-3 pb-2 d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" width="12"
+                                                    height="12" viewBox="0 0 576 512">
+                                                    <path
+                                                        d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"
+                                                        fill="#FFA500" />
+                                                </svg>
+                                                <span class="small">9.5</span>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" width="12"
+                                                    height="12" viewBox="0 0 384 512">
+                                                    <path
+                                                        d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"
+                                                        fill="red" />
+                                                </svg>
+                                                <span class="small">Expanding in Oman</span>
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            class="px-2 py-2 my-2 my-lg-1 my-xl-0 my-xxl-0 py-lg-1 py-xl-1 py-xxl-1 d-flex  flex-column  justify-content-center bg-light">
+                                            <div class="d-flex justify-content-between m-0 p-0 mb-1">
+                                                <p class="medium_text m-0 p-0 small">Exp. Monthly Sales
+                                                    <span data-toggle="tooltip" data-placement="right"
+                                                        title="This is expected real values may varry slightly">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="m_up" width="10"
+                                                            height="10" viewBox="0 0 512 512">
+                                                            <path
+                                                                d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z" />
+                                                        </svg>
+                                                    </span>
+                                                </p>
+                                                <p class="medium_text p-0 m-0 small">AED 90000</p>
+                                            </div>
+
+                                            <div class="d-flex  justify-content-between p-0 m-0">
+                                                <p class="medium_text m-0 p-0 small">Space Required
+                                                    <span data-toggle="tooltip" data-placement="right"
+                                                        title="Space is required to setup the franchise knowing this in advance is important for establishment of franchise.">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="m_up" width="10"
+                                                            height="10" viewBox="0 0 512 512">
+                                                            <path
+                                                                d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z" />
+                                                        </svg>
+                                                    </span>
+                                                </p>
+                                                <p class="medium_text p-0 m-0 small">1000-3000 Sq. Ft</p>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="px-3 d-flex justify-content-between">
+                                            <div class="">
+                                                <a href=""
+                                                    class="text-decoration-none link_color small fw-bold">Investment
+                                                    Size </a>
+                                                <p class="link_color small"> AED <b class="fs-6">5000</b> For <b
+                                                        class="fs-6">30%</b></p>
+                                            </div>
+                                            <div class="">
+                                                <a role="button" class="btn btn-sm official_bg text-white mt-2">Send
+                                                    Proposal</a>
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide col-md-4 h-75 col-sm-12 mb-sm-4 bg-white my-4 ">
+                            <div class="mb-4 d-flex align-items-stretch">
+                                <div class="card border_huntment py-2 py-lg-0 py-xl-0 py-xxl-0">
+                                    <div class="card-body p-0 d-flex flex-column">
+                                        <div class="border-bottom px-2 py-2">
+                                            <h6 class="card-title lg_text m-0">Franchise title goes here it should be
+                                                link</h6>
+                                            <a href="http://" class="text-decoration-none small
+                                                                  link_color">Hightlighting line about the Franchise.
+                                            </a>
+                                        </div>
+                                        <div class="social_info
+                                                                 d-flex align-items-center justify-content-between px-2 
+                                                                 py-3 py-lg-2 py-xl-2 py-xxl-2 small">
+                                            <div class="social_link card_inner small">
+                                                <a href="http://" class="text-decoration-none small link_color 
+                                                                    d-flex align-items-center" data-toggle="tooltip"
+                                                    data-placement="top" title="Email Verified">
+                                                    <svg class="me-1" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                        <path
+                                                            d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z" />
+                                                    </svg>
+                                                    Official Email
+                                                </a>
+                                            </div>
+                                            <div class="social_link card_inner small">
+                                                <a href="http://" class="text-decoration-none 
+                                                                    link_color d-flex align-items-center"
+                                                    data-toggle="tooltip" data-placement="top" title="Phone Verified">
+                                                    <svg class="me-1" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                        <path
+                                                            d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z" />
+                                                    </svg>
+                                                    Phone
+                                                </a>
+                                            </div>
+                                            <div class="social_link small">
+                                                <a href="http://" class="text-decoration-none 
+                                                                    unverified_link d-flex align-items-center"
+                                                    data-toggle="tooltip" data-placement="top"
+                                                    title="Google Unverified">
+                                                    <svg class="me-1 unverified_link" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                        <path
+                                                            d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM164 356c-55.3 0-100-44.7-100-100s44.7-100 100-100c27 0 49.5 9.8 67 26.2l-27.1 26.1c-7.4-7.1-20.3-15.4-39.8-15.4-34.1 0-61.9 28.2-61.9 63.2 0 34.9 27.8 63.2 61.9 63.2 39.6 0 54.4-28.5 56.8-43.1H164v-34.4h94.4c1 5 1.6 10.1 1.6 16.6 0 57.1-38.3 97.6-96 97.6zm220-81.8h-29v29h-29.2v-29h-29V245h29v-29H355v29h29v29.2z" />
+                                                    </svg>
+                                                    Google
+                                                </a>
+                                            </div>
+                                            <div class="social_link small">
+                                                <a href="http://" class="text-decoration-none link_color 
+                                                                    d-flex align-items-center small"
+                                                    data-toggle="tooltip" data-placement="top"
+                                                    title="Linkedin Verified">
+                                                    <svg class="me-1" width="12" height="12"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                        <path
+                                                            d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                                                    </svg>
+                                                    Linkedin
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="px-2 py-1 py-lg-0 py-xl-0 py-xxl-0">
+
+                                            <div class="franchise_img my-1 d-flex justify-content-center"
+                                                style="width:200px; height:110px">
+                                                <img src="../base/images/media.jpg" class="img-fluid w-100 h-100"
+                                                    alt="">
+                                            </div>
+                                            <p class="card-text py-2  mb-0 small">
+                                                Dummy franchise data to check the cards.Giving short
+                                                description of franchise here as link. </p>
+                                        </div>
+
+                                        <div class="px-3 pb-2 d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" width="12"
+                                                    height="12" viewBox="0 0 576 512">
+                                                    <path
+                                                        d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"
+                                                        fill="#FFA500" />
+                                                </svg>
+                                                <span class="small">9.5</span>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" width="12"
+                                                    height="12" viewBox="0 0 384 512">
+                                                    <path
+                                                        d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"
+                                                        fill="red" />
+                                                </svg>
+                                                <span class="small">Expanding in Oman</span>
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            class="px-2 py-2 my-2 my-lg-1 my-xl-0 my-xxl-0 py-lg-1 py-xl-1 py-xxl-1 d-flex  flex-column  justify-content-center bg-light">
+                                            <div class="d-flex justify-content-between m-0 p-0 mb-1">
+                                                <p class="medium_text m-0 p-0 small">Exp. Monthly Sales
+                                                    <span data-toggle="tooltip" data-placement="right"
+                                                        title="This is expected real values may varry slightly">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="m_up" width="10"
+                                                            height="10" viewBox="0 0 512 512">
+                                                            <path
+                                                                d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z" />
+                                                        </svg>
+                                                    </span>
+                                                </p>
+                                                <p class="medium_text p-0 m-0 small">AED 90000</p>
+                                            </div>
+
+                                            <div class="d-flex  justify-content-between p-0 m-0">
+                                                <p class="medium_text m-0 p-0 small">Space Required
+                                                    <span data-toggle="tooltip" data-placement="right"
+                                                        title="Space is required to setup the franchise knowing this in advance is important for establishment of franchise.">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="m_up" width="10"
+                                                            height="10" viewBox="0 0 512 512">
+                                                            <path
+                                                                d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z" />
+                                                        </svg>
+                                                    </span>
+                                                </p>
+                                                <p class="medium_text p-0 m-0 small">1000-3000 Sq. Ft</p>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="px-3 d-flex justify-content-between">
+                                            <div class="">
+                                                <a href=""
+                                                    class="text-decoration-none link_color small fw-bold">Investment
+                                                    Size </a>
+                                                <p class="link_color small"> AED <b class="fs-6">5000</b> For <b
+                                                        class="fs-6">30%</b></p>
+                                            </div>
+                                            <div class="">
+                                                <a role="button" class="btn btn-sm official_bg text-white mt-2">Send
+                                                    Proposal</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="swiper-button-next swiper-button-next1 "></div>
+                <div class="swiper-button-prev swiper-button-prev1 "></div>
+                <div class="swiper-pagination swiper-pagination1 "></div>
+            </section>
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+    <script>
+
+        const swiper = new Swiper('.swiper', {
+            // loop: true,
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                },
+
+            }
+        });
+    </script>
+
+</body>
+
+</html>

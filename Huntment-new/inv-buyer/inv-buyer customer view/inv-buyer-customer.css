@@ -1,0 +1,10 @@
+.official-color{
+    color: #1999ce;
+}
+.swiper-pagination{
+    top: 80%;
+}
+.alert{
+    border: 2px solid #ddd;
+    box-shadow: 2px 2px 2px #ddd;
+}

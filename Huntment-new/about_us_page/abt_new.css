@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Itim&family=Lato&family=Noto+Sans&family=Poppins:wght@400;500&family=Roboto+Mono:ital@1&family=The+Nautigal&family=Ubuntu&display=swap');
+:root{
+    --main-color: #1999ce;
+    font-family: 'Poppins', sans-serif;
+}
+.link_color{
+    color: var(--main-color);
+}
+.even_color{
+    background: rgba(229, 226, 226, 0.3);
+}
+
+.why_icon{
+    width: 550px;
+    height: 600px;
+}
+.team_members_img{
+    width:100px;
+     height:100px;
+}
+.card-title{
+    color: var(--main-color);
+}
+.designation{
+    font-size: 14px;
+    color: black;
+}
+.team_card{
+    width:25vw;
+    padding: 20px;
+    border-radius: 2rem 2rem 0 0 !important;
+    box-shadow: 2px 2px 6px gray;
+    min-height: 60vh !important;
+    height: 63vh !important;
+    border-bottom: 2px solid var(--main-color) !important;
+}
+.card_info {
+    font-size: 15px !important;
+    flex-grow: 1 !important;
+}
+.img_left{
+    width: 50%;
+}
+.img_left img{
+    width: 200px;
+    height: 200px;
+}
+.text_right p{
+    line-height: 2;
+    letter-spacing: 1px;
+
+}
+
+
+@media 
+only screen and (max-width: 575px),
+(min-device-width: 200px) and (max-device-width: 575px) {
+    *{
+        overflow-x: hidden !important;
+    }
+    section{
+        overflow-x: hidden !important;
+    }
+body{
+    overflow-x: hidden !important;
+}
+    .why_icon{
+        width: 350px;
+        order: 1;
+    }
+    .top_row{
+        order: 2;
+        padding-right: 20px;
+    }
+.team_card{
+    width: 100% !important;
+    margin: 0 10px;
+    height: 50vh !important;
+}
+.container_bottom{
+    flex-direction: column;
+}
+.img_left{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.text_right{
+    order: 2;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

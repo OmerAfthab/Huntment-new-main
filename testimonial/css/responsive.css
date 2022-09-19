@@ -1,0 +1,39 @@
+
+@media (min-width: 1200px) and (max-width: 1920px){
+}
+
+@media (min-width: 1200px){
+.container { max-width: 1200px; }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+.container { max-width: 970px; }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+.container { max-width: 750px; }
+.testimonialBlock { width: 50%; }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (max-width: 767px) {
+.container { max-width: 100%; }
+.testimonialBlock { width: 50%; }
+.testimonialBlock .testimonialDetail { margin-bottom: 5px; }
+}
+
+/*---------- Small Mobile , IPhone Start ----------*/
+
+/*=== Screen Size = 240, 320, 360, 480, 568 ===*/
+@media (min-width: 569px) and (max-width: 767px){
+}
+
+@media (min-width: 240px) and (max-width: 568px){
+.testimonialBlock { width: 100%; }
+.testimonialBlock .testimonialDetail .titleBlock .profile { flex: 0 0 100%; margin: 0 0 10px; }
+.testimonialBlock .testimonialDetail .titleBlock .title { flex: 0 0 100%; max-width: 100%; }
+}
+
+/*---------- Large Desktop , Large Screen End ----------*/

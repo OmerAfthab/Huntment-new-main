@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Itim&family=Lato&family=Noto+Sans&family=Poppins:wght@400;500&family=Roboto+Mono:ital@1&family=The+Nautigal&family=Ubuntu&display=swap');
+:root{
+    --bg-color:#1999ce;
+    --main-color: white;
+   
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+     box-sizing: border-box;  
+     font-family: 'Poppins', sans-serif;
+     /* border: none;
+     outline: none;    */
+}
+
+main{
+    flex-grow: 1;
+}
+section{
+    min-height: 100vh;
+}
+.why_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.why_img{
+   
+    margin-bottom: 5rem;
+}
+.why_img img{
+   width: 420px;
+   height: 540px;
+
+
+}
+.info{
+
+    height: 420px;
+}
+.info h1{
+    margin-left: 0.8rem;
+    font-weight: 900;
+    padding-bottom: 7px;
+    margin-bottom: 2rem;
+    width: 48%;
+    border-bottom: 2px solid var(--bg-color);
+}
+.info ul li{
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+.even_container{
+    background: rgba(229, 226, 226, 0.3);
+}
+.team_heading{
+        padding-top: 1rem;
+        width: 15%;
+        border-bottom: 2px solid var(--bg-color);
+}
+.card_container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    height: 80vh;
+}
+.team_img{
+    /* margin-top: 1.5rem; */
+    border: 2px solid rgb(168, 164, 164);
+    /* padding: 10px; */
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.team_card img{
+   
+    border: 2px solid var(--bg-color);
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+
+}
+.team_card{
+  
+    min-height: 70vh;
+    height: 70vh;
+    width:25vw;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    box-shadow: 2px 2px 6px gray;
+    border-radius: 2rem 2rem 0 0;
+    border-bottom: 2px solid var(--bg-color);
+    transition: all 0.5s ease-in-out;
+}
+.team_card:hover{
+    transform: scale(1.1);
+}
+.team_card h4{
+    color:  var(--bg-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top:0.2rem ;
+}
+.team_card p{
+    font-size: 12px;
+    line-height: 1.8;
+}
+.team_card p span{
+    font-weight: 900;
+    font-size: 15px;
+}
+.ideals_heading{
+    color: var(--bg-color);
+    font-weight: 600;
+    margin-left: 10.5%;
+
+}
+.first_row{
+ 
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 4px 4px 10px gray;
+    margin-bottom: 2rem;
+}
+
+.first_row h4{
+    font-weight: 600;
+}
+.first_row h4 span{
+    color:  var(--bg-color);
+}
+.integrity{
+    width: 20%;
+    height: 27vh;
+ 
+
+}
+.integrity img{
+   
+    width: 100%;
+    height: 100%;
+}
+.integrity-info{
+
+    width: 65%;
+    line-height: 2;
+}
+@media (min-width: 481px) and (max-width: 800px) {
+    .why_img{
+       
+        width: 300px;
+    }
+    .why_img img{
+        width: 350px;
+    }
+    .info h1{
+        width: 71%;
+    }
+    .info ul li{
+        font-size: 14px;
+    }
+    .team_heading{
+        width: 30%;
+        text-align: center;
+    }
+    
+    .team_card{
+        width: 40vw;
+        height: 55vw;
+    }
+    /* .team_cont{
+        height: 150vh;
+    } */
+    .card_container{
+       margin-top: 2rem;
+        height: 100vh;
+       
+    }
+}
+@media 
+only screen and (max-width: 480px),
+(min-device-width: 200px) and (max-device-width: 480px)  {
+    *{
+        overflow-x: hidden;
+    }
+    body{
+        overflow: unset;
+        overflow-x: hidden;
+        overflow-y: visible;
+    }
+    .why_container{
+        flex-direction: column;
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+    }
+   .why_img{
+       margin-bottom: 0;
+   }
+    .why_img img{
+        height: 300px;
+
+    }
+    .info{
+      margin-left: unset;
+        height: unset;
+        min-height: unset;
+    }
+   
+    .info h1{
+        
+        width: 100%;
+        text-align: center;
+        border-bottom: none;
+    }
+    .team_heading{
+        width: 100%;
+        text-align: center;
+        border-bottom: none;
+       
+    }
+   
+    .card_container{
+        flex-direction: column;
+        margin-left: 1.2rem;
+        height: auto;
+        padding-bottom: 2rem;
+    }
+    .team_card{
+        width: 90%;
+        min-height: unset;
+        height: auto;
+        margin-top: 2rem;
+    }
+    .team_card:hover{
+        transform: unset;
+        border: unset;
+    }
+    .ideals_heading{
+        text-align: center;
+        margin-bottom: 1rem;
+
+       
+    }
+    .first_row{
+        flex-direction: column;
+    }
+    .integrity{
+        width: 80%;
+        height: 17vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .integrity img{
+        width: 70%;
+    }
+    .integrity-info{
+        width: 90%;
+    }
+    .mid-row .integrity-info{
+        order: 2;
+    }
+    
+
+}
