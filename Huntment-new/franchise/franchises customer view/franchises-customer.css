@@ -93,3 +93,85 @@
 
 }
     
+
+
+
+/* css for popup  */
+
+.login-popup {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.40);
+    position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 12345;
+    visibility: hidden;
+	opacity: 0;
+	transition: all 1s ease;
+    padding-top: 1rem;
+}
+
+.form-popup-card{
+    border-radius: 8px;
+    width: fit-content;
+    margin: auto;
+   /* background-color: rgba(25,153,206); */
+   background-color: rgba(0, 0, 0, 0.7);
+
+}
+input::placeholder {
+    color: white !important;
+    opacity: 0.6 !important;
+     font-size: 12px;
+}
+.login-popup.show{
+    visibility: visible;
+	opacity: 1;
+    position: fixed;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%,-10%);
+}
+.btttn-1 {
+    font-size: 13px !important;
+    background-color: #1999ce !important;
+}
+
+.popup-input {
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 2px solid #1999ce !important;
+    border-radius:  0 !important;
+  color: white !important;
+}
+.popup-input:focus {
+    box-shadow: none !important;
+}
+.login-nav-tabs{
+    
+    border-radius: 10px 10px 0 0 !important;
+    background: rgba(248, 248, 248, 0.6);
+    height: 3rem;
+}
+.login-nav-tabs button:hover {
+    border: none !important;
+}
+.login-nav-tabs .active{
+    border-radius: 10px  10px 0 0 !important;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    color: white !important;
+    border: 0 !important;
+}
+.login-nav-tabs:hover{
+    border-radius: 10px  10px 0 0 !important;
+}
+.nav-tabs-links{
+    padding: 10px 20px;
+    font-size: 13px;
+    border-radius: 0 !important;
+}
+#nav-tabContent{
+    /* height: 34rem; */
+    width: 25rem;
+}
